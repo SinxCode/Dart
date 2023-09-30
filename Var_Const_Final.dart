@@ -1,7 +1,7 @@
 void main(){
 
 
-  final String apelido;
+  final String apelido; //Depois que a variavel apelido for atribuida a um valor uma vez, ele não irá mais ser modificado
   const String nome = 'Gabriel Brito';
   var idade = 24;
   var altura = 1.76;
@@ -11,7 +11,7 @@ void main(){
   
 
 
-  List <dynamic> Sinx = [nome, idade, altura, geek, apelido, 'Honey'];
+  List <dynamic> Sinx = [nome, idade, altura, geek, apelido, 'Honey']; 
 
 
   String frase = 'Eu sou ${Sinx[0]}, mas pode me chamar de ${Sinx[4]}.\n'
