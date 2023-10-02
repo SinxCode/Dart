@@ -9,11 +9,6 @@ Heroi heroi02 = Heroi(nome: 'Super bolinha', poder: 'Bola de chiclete', ataque: 
 heroi01.mostrarHeroi();
 heroi02.mostrarHeroi();
 
-
-
-
-
-
 }
 
 //Criando a Classe
