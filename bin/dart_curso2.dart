@@ -9,7 +9,7 @@ String sabor = 'Doce e cítrica';
 int diasDesdeColheita = 30;
 bool isMadura;
 //--------------------------------
- (diasDesdeColheita >=30) {
+if (diasDesdeColheita >=30) {
 isMadura = true;
 }
 else{
