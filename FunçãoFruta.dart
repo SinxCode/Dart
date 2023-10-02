@@ -1,6 +1,8 @@
 void main(){
 
- FuncFrutas('Maçã', 0.87, 10,);
+String fruta =  FuncFrutas('Maçã', 0.87, 10,);
+print(fruta);
+ 
 
 }
 
@@ -20,7 +22,9 @@ else
   madura = false;
 } 
 
-print( 'A fruta $nome tem $peso peso, foi colhida há $colheita dias, necessita de $diasMadura para ficar madura e está madura: $madura ');
+String Frase =  'A fruta $nome tem $peso peso, foi colhida há $colheita dias, necessita de $diasMadura para ficar madura e está madura: $madura ';
+
+return Frase;
 
 
 }
