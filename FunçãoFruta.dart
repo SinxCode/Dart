@@ -1,6 +1,6 @@
 void main(){
 
-String fruta =  FuncFrutas('Maçã', 0.87, 10,);
+String fruta =  FuncFrutas('Maçã', 0.87, 10,); // É criada a variável 'fruta' para ser possível chamar o return da função
 print(fruta);
  
 
