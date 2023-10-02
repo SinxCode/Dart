@@ -8,7 +8,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "ArmazenandoNomes.dart",
+            "program": "Fatorial.dart",
             "console": "terminal"
         }
     ]
