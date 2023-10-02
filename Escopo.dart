@@ -18,7 +18,6 @@ funcQuantosDiasMadura(int dias){
 
 }
 
-
 void mostrarMadura(String nome, int dias){  
 
 if (dias >= 30) 

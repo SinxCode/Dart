@@ -8,7 +8,7 @@
             "name": "dart_curso2",
             "request": "launch",
             "type": "dart",
-            "program": "bin/Escopo.dart"
+            "program": "Classe.dart"
         }
     ]
 }
