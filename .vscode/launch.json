@@ -8,7 +8,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "FunçãoRecursiva.dart",
+            "program": "CadastrandoHerois.dart",
             "console": "terminal"
         }
     ]
