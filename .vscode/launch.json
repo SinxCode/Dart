@@ -8,7 +8,7 @@
             "name": "dart_curso2",
             "request": "launch",
             "type": "dart",
-            "program": "Classe.dart"
+            "program": "Metodos.dart"
         }
     ]
 }
