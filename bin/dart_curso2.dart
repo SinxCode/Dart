@@ -1,5 +1,23 @@
-import 'package:dart_curso2/dart_curso2.dart' as dart_curso2;
+void main(){
 
-void main(List<String> arguments) {
-  print('Hello world: ${dart_curso2.calculate()}!');
+//Tudo abaixo são objetos
+
+String nome = 'Laranja';
+double peso = 100.2;
+String cor = 'Verde e Amarela';
+String sabor = 'Doce e cítrica';
+int diasDesdeColheita = 40;
+bool isMadura;
+//--------------------------------
+
+if (diasDesdeColheita >=30) {
+isMadura = true;
+}
+else{
+isMadura = false;
+}
+
+
+
+
 }
