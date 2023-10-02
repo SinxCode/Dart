@@ -2,20 +2,6 @@ void main(){
 
 
 int diasDesdeColheita = 40;
-//bool isMadura = funcEstaMadura(diasDesdeColheita); 
-//--------------------------------
-
-
-//print(isMadura);
-//print(funcEstaMadura(30)); 
-
-//mostrarMadura('Uva', 40); 
-
-//mostrarMadura2('Laranja', 40, cor: 'Laranja'); 
-
-//mostrarMadura3('Maçã', 20); 
-
-//mostrarMadura3('Acerola', 48, cor: 'Vermelha'); 
 
 int quantosdias = funcQuantosDiasMadura(diasDesdeColheita); //não é possível fazer o cálculo sem a varíavel quantos dias dentro do escop (delimitação) da função main
 print(quantosdias);
