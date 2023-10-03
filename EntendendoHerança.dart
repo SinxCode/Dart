@@ -26,27 +26,17 @@ fruta02.estaMadura(10);
 
 }
 
-//Criando uma classe, normalmente começam com letras maiúsculas
-//Utilizamos classes quando queremos representar objetos ou conceitos similares, com suas características e ações, para podermos usá-lo várias vezes.
-//Para propriedades que não podem ser nulas (diferente da bool) é necessário um construtor, para alimentar as informações de fora.
-class Fruta{ 
 
-String nome;
-double peso;
-String cor;
-String sabor;
-int diasDesdeColheita;
-bool? isMadura; //quando tem o interrogação pode receber valor nulo
-
-//Criando construtor
-Fruta(this.nome, this.peso, this.cor, this.sabor,this.diasDesdeColheita, {this.isMadura}); //Sintaxe para criação do construtor. Todas as regras de parâmetnros se aplicam aqui.
-
-//Criando um método, é basicamente uma função, porém criada dentro do escopo da classe.
-estaMadura(int diasParaMadura){
-  isMadura = diasDesdeColheita >= diasParaMadura; //Funciona basicamente como a função 'funcEstaMadura'. Faz uma comparação de True e False, pois o '>=' é um operador booleano
-                                                  //Ou seja, se a informação for verdadeira, ele jogará para dentro de diasParaMadura
-  print('A sua $nome foi colhida há $diasDesdeColheita dias, e precisa de $diasParaMadura para poder comer. Ela estámadura? $isMadura');
-
+bool funcEstaMadura(int dias) 
+{
+  
+if (dias >=30) 
+{
+  return true;
+}
+else
+{
+  return false;
 }
 
 }
@@ -120,18 +110,75 @@ else
 
 }
 
-bool funcEstaMadura(int dias) 
-{
-  
-if (dias >=30) 
-{
-  return true;
-}
-else
-{
-  return false;
-}
+class Fruta{ 
+
+String nome;
+double peso;
+String cor;
+String sabor;
+int diasDesdeColheita;
+bool? isMadura; 
+
+
+Fruta(this.nome, this.peso, this.cor, this.sabor,this.diasDesdeColheita, {this.isMadura}); 
+
+
+estaMadura(int diasParaMadura){
+  isMadura = diasDesdeColheita >= diasParaMadura; 
+  print('A sua $nome foi colhida há $diasDesdeColheita dias, e precisa de $diasParaMadura para poder comer. Ela estámadura? $isMadura');
 
 }
 
+}
 
+
+class Alimento{
+  String nome;
+  double peso;
+  String cor;
+
+  Alimento(this.nome, this.peso, this.cor);
+
+}
+
+class Legumes{
+
+    String nome;
+    double peso;
+    String cor;
+    bool isprecisaCozinhar;
+
+    Legumes(this.nome, this.peso, this.cor, this.isprecisaCozinhar);
+
+}
+
+class Citricas{
+  String nome;
+  double peso;
+  String cor;
+  int diasDesdeColheita;
+  bool? isMadura;
+  double nivelAzedo;
+
+  Citricas(this.nome, this.peso, this.cor, this.diasDesdeColheita, this.nivelAzedo);
+
+}
+
+class Nozes{
+  String nome;
+  double peso;
+  String cor;
+  int diasDesdeColheita;
+  bool? isMadura;
+  double porcentagemDeOleoNatural;
+
+  Nozes(this.nome, this.peso, this.cor, this.diasDesdeColheita, this.porcentagemDeOleoNatural);
+
+}
+
+//Nas Classes criadas acimas, há diversas propriedades que se repetem como "nome", "peso", "cor", "isMadura"
+//Para resolver esse problema, facilitar e diminuir o nosso código podemos usar HERANÇAS
+//Herança permite que classes compartilhem propriedades e métodos, através de (literalmente) "heranças".
+//O principal objetivo de usar herança é reaproveitar código. Isso é feito usando o conceito de “generalização” e de “especificação”,
+//onde a classe-mãe (também chamada de superclasse) possui, em geral, propriedades e métodos mais generalistas, 
+//enquanto as classes-filha (também chamadas de subclasses) tornam as propriedades e métodos, recebidos pela superclasse, específicos para seus objetivos.
