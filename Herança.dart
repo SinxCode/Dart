@@ -40,7 +40,7 @@ mandioca1.cozinhar();
 limao1.fazerSuco();
 
 // mandioca1.fazerSuco(); //Não é possível acessas o método fazer suco, pois Legumes não herda nada de Fruta
-// limao1.cozinhar();     //Não é possível acessas o método cozinhar, pois Fruta não herda nada de Legumes
+// limao1.cozinhar();     //Não é possível acessas o método cozinhar, pois Fruta não herda nada de Legumes /
 
 
 
