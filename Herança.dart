@@ -1,16 +1,16 @@
 void main(){
 
 
-String nome = 'Laranja';
-double peso = 100.2;
-String cor = 'Verde e Amarela';
-String sabor = 'Doce e cítrica';
-int diasDesdeColheita = 30;
+//String nome = 'Laranja';
+//double peso = 100.2;
+//String cor = 'Verde e Amarela';
+//String sabor = 'Doce e cítrica';
+//int diasDesdeColheita = 30;
 //bool isMadura;
 
-Fruta fruta01 = Fruta(nome, peso, cor, sabor, diasDesdeColheita); //Está alimentando a classe conforme as variáveis acima / criando o objeto fruta01
+//Fruta fruta01 = Fruta(nome, peso, cor, sabor, diasDesdeColheita); //Está alimentando a classe conforme as variáveis acima / criando o objeto fruta01
 
-Fruta fruta02 = Fruta("Uva", 0.2, "Roxa", "Doce", 5); //Alimentando a classe  através do construtor/ criando o objeto fruta02
+//Fruta fruta02 = Fruta("Uva", 0.2, "Roxa", "Doce", 5); //Alimentando a classe  através do construtor/ criando o objeto fruta02
 
 //print(fruta01.nome); //Por conta da criação da classe, podemos referenciar qualquer dado pelo nome, e não pelo indice como em listas.
 //print(fruta01); //irá imprimir "instace of Fruta", pois fruta01 é um objeto dentro da classe Fruta. 
