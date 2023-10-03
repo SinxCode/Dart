@@ -12,15 +12,41 @@ Fruta fruta01 = Fruta(nome, peso, cor, sabor, diasDesdeColheita); //Está alimen
 
 Fruta fruta02 = Fruta("Uva", 0.2, "Roxa", "Doce", 5); //Alimentando a classe  através do construtor/ criando o objeto fruta02
 
-print(fruta01.nome); //Por conta da criação da classe, podemos referenciar qualquer dado pelo nome, e não pelo indice como em listas.
-print(fruta01); //irá imprimir "instace of Fruta", pois fruta01 é um objeto dentro da classe Fruta. 
+//print(fruta01.nome); //Por conta da criação da classe, podemos referenciar qualquer dado pelo nome, e não pelo indice como em listas.
+//print(fruta01); //irá imprimir "instace of Fruta", pois fruta01 é um objeto dentro da classe Fruta. 
                 //Quando printamos fruta01.nome estamos acessando a PROPRIEDADE "nome" do OBJETO fruta01 do qual estamos INSTANCIANDO.
 
-print(fruta02.nome);
-print(fruta02);
+//print(fruta02.nome);
+//print(fruta02);
 
-fruta01.estaMadura(30);
-fruta02.estaMadura(10);
+//fruta01.estaMadura(30);
+//fruta02.estaMadura(10);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Criando objetos para as classes após a herança:
+Legumes mandioca1 = Legumes('Macaxeira', 1200, 'Marrom', true);
+Fruta banana1 = Fruta('Banana', 75, 'Amarela', 'Doce', 12);
+Nozes macadamia1 = Nozes('Macadâmia', 2, 'Branco Amarelado', 'Doce', 20, 35);
+Citricas limao1 = Citricas('Limão', 100, 'Verde', 'Azedo', 5, 9);
+
+//Todos os objetos conseguem acessar o método "printAlimento" pois esse método foi criado na Classe mãe de todas as classes "Alimento"
+mandioca1.printAlimento();
+banana1.printAlimento();
+mandioca1.printAlimento();
+macadamia1.printAlimento();
+limao1.printAlimento();
+
+mandioca1.cozinhar();
+limao1.fazerSuco();
+
+// mandioca1.fazerSuco(); //Não é possível acessas o método fazer suco, pois Legumes não herda nada de Fruta
+// limao1.cozinhar();     //Não é possível acessas o método cozinhar, pois Fruta não herda nada de Legumes
+
+
+
+
+
+
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,7 +172,7 @@ estaMadura(int diasParaMadura){
 
 }
 
-//A propriedade nome está vindo da classe mãe
+//A propriedade nome está vindo da classe mãe.
 void fazerSuco(){
   print('Você fez um ótimo suco de $nome');
 }
@@ -170,7 +196,7 @@ class Legumes extends Alimento{
 
     void cozinhar(){
       if (isprecisaCozinhar) {
-        print('Pronto, o $nome está cozinhando.');
+        print('Pronto, o(a) $nome está cozinhando.');
       }
       else{
         print('Nem precisa cozinhar!');
@@ -180,25 +206,36 @@ class Legumes extends Alimento{
 
 }
 
-class Citricas extends Alimento{
+class Citricas extends Fruta{
 
-  int diasDesdeColheita;
-  bool? isMadura;
   double nivelAzedo;
 
-  Citricas(String nome, double peso, String cor, this.diasDesdeColheita, this.nivelAzedo)
-  :super(nome, peso, cor);
+  //Importante lembrar que TODAS as propriedades existentes na classe mãe DEVEM estar presentes no construtor e no super, a menos que sejam booleanas, são opocionais.
+  Citricas(String nome, double peso, String cor,String sabor, int diasDesdeColheita, this.nivelAzedo)
+
+  //Apesar de estarmos herdando de Fruta, as propriedades nome, peso e cor ainda vem de Alimento, pois Fruta herdou esses dele.
+  :super(nome, peso, cor, sabor, diasDesdeColheita); //o 'isMadura' presente na classe mãe não está aqui, pois é um booleano, é opcional.
+
+  existeRefri(bool existe){
+    if (existe){
+      print('Existe refrigerante de $nome');
+    }
+
+    else{
+      print('Não existe refri de $nome');
+    }
+
+  }
 
 }
 
-class Nozes extends Alimento{
+class Nozes extends Fruta{
  
-  int diasDesdeColheita;
-  bool? isMadura;
   double porcentagemDeOleoNatural;
 
-  Nozes(String nome, double peso, String cor, this.diasDesdeColheita, this.porcentagemDeOleoNatural)
-  :super(nome, peso, cor);
+  Nozes(String nome, double peso, String cor,String sabor, int diasDesdeColheita, this.porcentagemDeOleoNatural)
+  :super(nome, peso, cor, sabor, diasDesdeColheita);
+
 
 }
 
